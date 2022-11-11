@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".EndActivity">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/end_TXT_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:fontFamily="casual"
+        android:textColor="@color/white" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/end_BTN_restart"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="100dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="casual"
+        android:text="@string/start_over"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
