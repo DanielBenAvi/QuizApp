@@ -2,6 +2,7 @@ package com.example.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -19,6 +20,9 @@ public class EndActivity extends AppCompatActivity {
     MaterialTextView end_TXT_text;
     MaterialButton end_BTN_restart;
     MaterialButton end_BTN_saveScore;
+    MaterialButton saveButton_BTN_save;
+
+    private Dialog dialog;
 
 
     @Override
@@ -37,12 +41,31 @@ public class EndActivity extends AppCompatActivity {
 
 
         end_BTN_restart.setOnClickListener(v -> changeScreenToGame());
+        end_BTN_saveScore.setOnClickListener(v -> saveAction());
 
         Intent previousIntent = getIntent();
         String status = previousIntent.getStringExtra(KEY_STATUS);
         int score = previousIntent.getIntExtra(KEY_SCORE, 0);
         end_TXT_text.setText(MessageFormat.format("{0}\nScore: {1}", status, score));
 
+    }
+
+    private void saveAction() {
+        // constructor
+        dialog = new Dialog(this);
+
+        // connect the dialog to the layout
+        dialog.setContentView(R.layout.save_score);
+
+        dialog.setTitle("");
+        dialog.setCancelable(true);
+
+        saveButton_BTN_save = dialog.findViewById(R.id.saveButton_BTN_save);
+        saveButton_BTN_save.setOnClickListener(v -> saveButton());
+        dialog.show();
+    }
+
+    private void saveButton() {
     }
 
     private void changeScreenToGame() {
