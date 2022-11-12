@@ -18,6 +18,7 @@ public class EndActivity extends AppCompatActivity {
 
     MaterialTextView end_TXT_text;
     MaterialButton end_BTN_restart;
+    MaterialButton end_BTN_saveScore;
 
 
     @Override
@@ -32,6 +33,7 @@ public class EndActivity extends AppCompatActivity {
         // buttons
         end_TXT_text = findViewById(R.id.end_TXT_text);
         end_BTN_restart = findViewById(R.id.end_BTN_restart);
+        end_BTN_saveScore = findViewById(R.id.end_BTN_saveScore);
 
 
         end_BTN_restart.setOnClickListener(v -> changeScreenToGame());
