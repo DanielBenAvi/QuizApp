@@ -1,6 +1,4 @@
-package com.example.quizapp;
-
-import android.graphics.drawable.Drawable;
+package com.example.quizapp.Model;
 
 public class Flag {
     private int imageRes;

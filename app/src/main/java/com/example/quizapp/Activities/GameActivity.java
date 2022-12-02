@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 
 
+import com.example.quizapp.Model.GameManager;
+import com.example.quizapp.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textview.MaterialTextView;

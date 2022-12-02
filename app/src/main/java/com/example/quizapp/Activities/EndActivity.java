@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,10 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.quizapp.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.datepicker.MaterialTextInputPicker;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.text.MessageFormat;
@@ -21,6 +24,8 @@ public class EndActivity extends AppCompatActivity {
     MaterialButton end_BTN_restart;
     MaterialButton end_BTN_saveScore;
     MaterialButton saveButton_BTN_save;
+    TextInputEditText saveScore_EDT_name;
+
 
     private Dialog dialog;
 
@@ -61,11 +66,15 @@ public class EndActivity extends AppCompatActivity {
         dialog.setCancelable(true);
 
         saveButton_BTN_save = dialog.findViewById(R.id.saveButton_BTN_save);
+        saveScore_EDT_name = dialog.findViewById(R.id.saveScore_EDT_name);
         saveButton_BTN_save.setOnClickListener(v -> saveButton());
         dialog.show();
     }
 
     private void saveButton() {
+        String name = saveScore_EDT_name.getText().toString();
+        dialog.cancel();
+
     }
 
     private void changeScreenToGame() {

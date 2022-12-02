@@ -1,4 +1,6 @@
-package com.example.quizapp;
+package com.example.quizapp.Model;
+
+import com.example.quizapp.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,7 @@
-package com.example.quizapp;
+package com.example.quizapp.Model;
+
+import com.example.quizapp.Model.DataManager;
+import com.example.quizapp.Model.Flag;
 
 import java.util.ArrayList;
 import java.util.Collections;
